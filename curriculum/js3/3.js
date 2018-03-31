@@ -5,7 +5,7 @@
  */
 
 const solution = (a) => {
-  let hashCount = {};
+  const hashCount = {};
   a.forEach(num => {
     hashCount[num] = hashCount[num] ? hashCount[num] + 1 : 1;
   });
