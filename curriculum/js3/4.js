@@ -6,8 +6,11 @@
  * @returns {boolean}
  */
 
-const solution = (a,b)=>{
-  return boolean;
+const solution = (a, b, idx = 0, lookUp = {}) => {
+  if (idx >= a.length) return false;
+  if (lookUp[b - a[idx]]) return true;
+  lookUp[a[idx]] = true;
+  return solution(a, b, idx + 1, lookUp);
 }
 
 module.exports = {
