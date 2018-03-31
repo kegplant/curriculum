@@ -5,8 +5,8 @@
  * @return {nothing}
  **/
 
-const solution = (a,b)=>{
-  return;
+const solution = (a, b) => {
+  Object.keys(a).forEach(key => b(key, a[key]));
 }
 module.exports = {
   solution
