@@ -4,8 +4,12 @@
  * @return {array} b
  */
 
-const solution = (a)=>{
-  return b;
+const solution = (a) => {
+  const hashCount = {};
+  a.forEach(num => {
+    hashCount[num] = hashCount[num] ? hashCount[num] + 1 : 1;
+  });
+  return Object.keys(hashCount).filter(key => hashCount[key] > 1).map(Number);
 }
 
 module.exports = {
