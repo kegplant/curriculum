@@ -8,7 +8,11 @@
  * @param {function} b
  * @returns {object} c
 */
-const solution = (a,b)=>{
+const solution = (a, b) => {
+  const c = {};
+  Object.keys(a).forEach(key => {
+    if (b(key, a[key])) c[key] = a[key];
+  })
   return c;
 }
 module.exports = {
