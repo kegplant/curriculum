@@ -6,7 +6,7 @@
  **/
 
 const solution = (a,b)=>{
-  return;
+  Object.keys(a).forEach(key => b(key,a[key]));
 }
 module.exports = {
   solution
