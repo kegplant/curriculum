@@ -4,9 +4,9 @@
  */
 
 const solution = () => {
-  Array.prototype.gsReduce = function () {
-    // To get the actual array, use this
-    return [];
+  Array.prototype.gsReduce = function (callback, accr = 0, arr = this, idx = 0) {
+    if (idx == arr.length) return accr;
+    return Array.prototype.gsReduce(callback, callback(accr, arr[idx]), arr, idx + 1);
   };
 };
 
